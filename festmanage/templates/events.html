@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if message %}
+    <script>
+        alert('{{ message }}');
+    </script>
+    {% endif %}
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Events</title>
+</head>
+
+<body class="bg-gray-100 p-4">
+    <div class="w-full min-h-screen bg-gray-50 flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+        <div class="w-full sm:max-w-md p-5 mx-auto">
+            <h2 class="text-2xl font-bold text-center">Events</h2><br>
+            {% for event in events %}
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">{{ event.event_name }}</h2>
+                <p class="text-lg mb-2"><i class="far fa-calendar-alt mr-2"></i>Date: {{ event.event_date }}</p>
+                <p class="text-lg mb-2"><i class="far fa-clock mr-2"></i>Time: {{ event.event_time }}</p>
+                <p class="text-lg mb-2"><i class="fas fa-map-marker-alt mr-2"></i>Venue: {{ event.event_venue }}</p>
+                <p class="text-lg mb-4"><i class="fas fa-ticket-alt mr-2"></i>Total tickets: {{ event.total_tickets }}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <a href="{% url 'index' %}">
+            <button
+                class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Back</button>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

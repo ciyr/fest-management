@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Event Organizing Club</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="container mx-auto py-10">
+        <h1 class="text-3xl font-bold mb-5">Add Event Organizing Club</h1>
+        <form method="post" action="{% url 'event_clubs' %}">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="event_name">
+                    Event Name
+                </label>
+                <select class="form-select mt-1 block w-full" name="event_name" id="event_name">
+                    {% for event in events %}
+                        <option value="{{ event.event_name }}">{{ event.event_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="club_name">
+                    Club Name
+                </label>
+                <select class="form-select mt-1 block w-full" name="club_name" id="club_name">
+                    {% for club in clubs %}
+                        <option value="{{ club.club_name }}">{{ club.club_name }}</option>
+                    {% endfor %}
+                    
+                </select>
+            </div>
+            <div class="mt-10">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
+                    Add Club to Event
+                </button>
+            </div>
+        </form>
+        <br>
+        <a href="{% url 'index' %}">
+            <button
+                class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Back</button>
+        </a>
+
+    </div>
+</body>
+</html>

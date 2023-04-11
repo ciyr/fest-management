@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if message %}
+    <script>
+        alert('{{ message }}');
+    </script>
+    {% endif %}
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Fest Management</title>
+</head>
+
+<body class="bg-gray-100 p-4">
+    <div class="container mx-auto mt-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Welcome to Our Fest Management System</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="/addEvents" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Add Event</h2>
+              <p class="text-gray-700">Add a new event to our system</p>
+            </div>
+          </a>
+          <a href="/events" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">View Events</h2>
+              <p class="text-gray-700">View all events in our system</p>
+            </div>
+          </a>
+          <a href="/buy_tickets" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Buy Tickets</h2>
+              <p class="text-gray-700">Buy tickets for an event</p>
+            </div>
+          </a>
+          <a href="/create_customer" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Create Customer</h2>
+              <p class="text-gray-700">Add a new customer</p>
+            </div>
+          </a>
+          <a href="/add_sponsors" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Create Sponsor</h2>
+              <p class="text-gray-700">Add a new sponsor</p>
+            </div>
+          </a>
+          <a href="/add_performers" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Create Performer</h2>
+              <p class="text-gray-700">Add a new performer</p>
+            </div>
+          </a>
+          <a href="/add_clubs" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Create Club</h2>
+              <p class="text-gray-700">Add a new club</p>
+            </div>
+          </a>
+          <a href="/event_sponsors" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Sponsor to Event</h2>
+              <p class="text-gray-700">Add a sponsor to a given event</p>
+            </div>
+          </a>
+          <a href="/event_performers" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Performer to Event</h2>
+              <p class="text-gray-700">Add a performer to a given event</p>
+            </div>
+          </a>
+          <a href="/event_clubs" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Club to Event</h2>
+              <p class="text-gray-700">Add a club to a given event</p>
+            </div>
+          </a>
+          <a href="/event_vendors" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Vendor to Event</h2>
+              <p class="text-gray-700">Add a vendor to a given event</p>
+            </div>
+          </a>
+          <a href="/add_vendors" class="block bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition duration-300">
+            <div class="p-4">
+              <h2 class="text-2xl font-bold mb-2">Create Vendor</h2>
+              <p class="text-gray-700">Add a new vendor</p>
+            </div>
+      </div>
+</body>
+
+</html>
